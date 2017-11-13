@@ -1,0 +1,333 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: helvetica;
+}
+
+a{
+	text-decoration: none;
+	color: white; 
+}
+
+p, h1, h2, h3{
+	color: white;
+}
+
+p{
+	font-weight: 600;
+}
+
+.btn{
+	position: relative;
+	margin: 0 auto 1rem auto;
+	opacity: 0;
+	border: 2px solid white;
+	box-sizing: content-box;
+	/*overflow-x: hidden;*/
+	display: inline-block;
+
+	animation-name: button-display;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	animation-delay: 1s;
+}
+
+.btn div{
+	overflow: hidden;
+}
+
+.btn:before{
+	opacity: 0;
+	content: "";
+	position: absolute;
+	top: -4px;
+	left: 10px;
+	width: 30px;
+	height: 6px;
+	background: white;
+	transition: 0.3s all ease;
+
+	animation: show-button-decal;
+	animation-duration: 0.5s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+}
+
+.btn:hover:before{
+	width: 90px;
+}
+
+@keyframes show-button-decal{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+.btn p{
+	text-transform: uppercase;
+	margin: 10px auto;
+	text-align: center;
+	width: 200px;
+	cursor: pointer;
+
+	animation-name: offset-button-text;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	animation-delay: 1s;
+}
+
+.btn-red{
+	background: rgba(140,0,0,0.6);
+	transition: 0.3s all ease;
+}
+.btn-red:hover{
+	background: rgba(140,0,0,0.8);
+}
+
+.btn-yellow{
+	background: rgba(130,82,0,0.6);
+	transition: 0.3s all ease;
+}
+.btn-yellow:hover{
+	background: rgba(130,82,0,0.8);
+}
+
+.btn-blue{
+	background: rgba(0,0,1400,0.6);
+	transition: 0.3s all ease;
+}
+.btn-blue:hover{
+	background: rgba(0,0,140,0.8);
+}
+
+@keyframes button-display{
+	0%{
+		opacity: 1;
+		width: 0;
+	}
+	100%{
+		width: 200px;
+		opacity: 1;
+	}
+}
+
+@keyframes offset-button-text{
+	0%{
+		transform: translateX(-100px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
+}
+
+.slide-wrap{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.slide{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: bottom center;
+}
+
+.slide1{
+	background-image: url(../images/BG_1.jpg);
+	text-align: center;
+}
+.slide2{
+	background-image: url(../images/BG_2.jpg);
+}
+.slide3{
+	background-image: url(../images/BG_3.jpg);
+	text-align: center;
+}
+
+/* SLIDE 1 START */
+
+.slide-1-wrap{
+	width: 95%;
+}
+
+/* SLIDE 1 END */
+
+
+/* SLIDE 2 START */
+
+.slide-2-wrap{
+	width: 50%;
+	min-width: 750px;
+	height: 260px;
+}
+
+.slide-2-wrap > div{
+	display: flex;
+}
+
+.slide2_left{
+	height: 100%;
+	flex: 1;
+	box-sizing: border-box;
+	padding: 0 2rem 0 0;
+}
+
+.slide2_left > h2{
+	text-transform: uppercase;
+	margin: 0.5rem 0 0 0;
+	padding: 0 0 0.5rem 0;
+	border-bottom: 2px solid white;
+}
+.slide2_left > h2:before{
+	content: "";
+	position: absolute;
+	top: -2px;
+	height: 6px;
+	width: 60px;
+	background: white;
+}
+
+.slide2_left > p{
+	text-transform: uppercase;
+	margin: 0.5rem 0;
+	font-weight: 600;
+	padding: 0 3rem 0 0;
+}
+
+.slide2_right{
+	height: 100%;
+	flex: 3;
+	box-sizing: border-box;
+	display: flex;
+}
+
+.slide2_right div{
+	position: relative;
+	flex: 1;
+	margin: 0 8px;
+	padding: 12px;
+	border: 2px solid white;
+	background: rgba(130,82,0,0.4);
+	transition: 0.3s all ease;
+}
+
+.slide2_right > div:hover{
+	background: rgba(130,82,0,0.8);
+}
+
+.slide2_right > div:before{
+	content: "";
+	position: absolute;
+	width: 80px;
+	height: 6px;
+	top: -4px;
+	background: white;
+	transition: 0.3s all ease;
+}
+
+.slide2_right > div:hover:before{
+	width: 120px
+}
+
+.slide2_right > div h3{
+	text-transform: uppercase;
+	margin: 0;
+}
+
+@media( max-width: 1024px ){
+	.slide-2-wrap{
+		width: 80%;
+		min-width: 0;
+	}
+
+	.slide-2-wrap > div{
+		display: block;
+	}
+
+	.slide2_left{
+		height: auto;
+		padding: 0 30% 1rem 0;;
+	}
+
+	.slide2_left > h2:before{
+		top: -12px;
+	}
+
+	.slide2_right > div:before{
+		top: calc(100% - 2px);
+	}
+}
+
+@media( max-width: 668px ){
+	.slide2_right{
+		display: block;
+	}
+
+	.slide2_right > div{
+		margin: 8px;
+	}
+}
+
+/*
+	PONG
+*/
+	.pong-wrap{
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+
+	.score{
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		color: white;
+		text-transform: uppercase;
+		font-size: 10px;
+	}
+
+	.score > h1{
+		font-weight: 900;
+		display: flex;
+		align-items: center;
+	}
+
+	.player_score, .opponent_score{
+		font-size: 48px;
+		margin: 0 12px;
+	}
+
+	.ball{
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background: white;
+		margin: -10px 0 0 -10px;
+	}
+
+	.player, .opponent{
+		position: absolute;
+		width: 20px;
+		height: 140px;
+		background: white;
+		margin-top: -70px;
+	}
+
+	.player{
+		left: 60px;
+		top: 50%;
+	}
+
+	.opponent{
+		right: 60px;
+		top: 50%;
+	}
