@@ -158,6 +158,28 @@ p{
 	width: 95%;
 }
 
+.slide1 h1{
+	font-weight: 900;
+	font-size: 180px;
+	margin: 0;
+	position: relative;
+}
+
+.slide1 h1:before{
+	content: "www.";
+	position: absolute;
+	left: 19%;
+	top: 38px;
+	font-size: 24px;
+}
+
+.slide1 h1:after{
+	content: ".com";
+	position: absolute;
+	right: 19%;
+	bottom: 30px;
+	font-size: 24px;
+}
 /* SLIDE 1 END */
 
 
