@@ -23,7 +23,6 @@ p{
 	opacity: 0;
 	border: 2px solid white;
 	box-sizing: content-box;
-	/*overflow-x: hidden;*/
 	display: inline-block;
 
 	animation-name: button-display;
@@ -158,27 +157,81 @@ p{
 	width: 95%;
 }
 
+.slide-1-wrap > div{
+	display: flex;
+	justify-content: center;
+}
+
 .slide1 h1{
-	font-weight: 900;
-	font-size: 180px;
+	font-size: 160px;
 	margin: 0;
-	position: relative;
+	position: absolute;
+	width: auto;
+}
+
+.slide1 span{
+	width: auto;
 }
 
 .slide1 h1:before{
 	content: "www.";
 	position: absolute;
-	left: 19%;
-	top: 38px;
+	left: 12px;
+	top: 4px;
 	font-size: 24px;
 }
 
 .slide1 h1:after{
 	content: ".com";
 	position: absolute;
-	right: 19%;
-	bottom: 30px;
+	right: 10px;
+	bottom: 12px;
 	font-size: 24px;
+}
+
+@media(max-width: 1024px){
+	.slide1 h1{
+		font-size: 120px;
+	}
+
+	.slide1 h1:before{
+		left: 10px;
+		top: -4px;
+	}
+
+	.slide1 h1:after{
+		right: 6px;
+		bottom:  3px;
+	}
+}
+
+
+@media(max-width: 768px){
+	.slide1 h1{
+		font-size: 90px;
+		width: 80%;
+	}
+
+	.slide1 span{
+		display: block;
+		width: 100%;
+		text-align: left;
+	}
+
+	.slide1 span:nth-child(2){
+		text-align: right;
+		transform: translateY(-30px);
+	}
+
+	.slide1 h1:before{
+		left: 8px;
+		top: -11px;
+	}
+
+	.slide1 h1:after{
+		right: 4px;
+		bottom:  26px;
+	}
 }
 /* SLIDE 1 END */
 
