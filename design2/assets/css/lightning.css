@@ -3,17 +3,19 @@
 	height: 100%;
 	position: absolute;
 	top: 0;
+	margin-top: -20%;
 }
 
 .lightning{
 	position: absolute;
-	background: #0ff;
+	background: #fff;
 	width: 4px;
 	border-radius: 2px;
 
 	animation-name: lightning;
-	animation-duration: 0.5s;
+	animation-duration: 1s;
 	animation-fill-mode: forwards;
+	animation-delay: 0s;
 }
 
 @keyframes lightning{

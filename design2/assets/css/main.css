@@ -167,10 +167,13 @@ p{
 	margin: 0;
 	position: absolute;
 	width: auto;
+	box-sizing: border-box;
 }
 
 .slide1 span{
 	width: auto;
+	position: relative;
+	z-index: 99;
 }
 
 .slide1 h1:before{
