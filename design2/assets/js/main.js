@@ -10,6 +10,9 @@ $(document).ready(function(){
 	    $('.paralax-negative').css('transform','translate(' + (Xoffset*-1) + 'px, ' + (Yoffset*-1) + 'px)');
 	    $('.paralax-negative-double').css('transform','translate(' + (Xoffset*-2) + 'px, ' + (Yoffset*-2) + 'px)');
 	})
+	function get_offset(mouse, browser){
+		return (((mouse - (browser / 2))/(browser / 2))*10) * -1;
+	}
 
 	$(window).scroll( function() {
 		get_scroll_position();
@@ -23,9 +26,7 @@ $(document).ready(function(){
 		scroll_to($(this).index() + 1);
 	});
 
-	function get_offset(mouse, browser){
-		return (((mouse - (browser / 2))/(browser / 2))*10) * -1;
-	}
+	
 
 	function get_scroll_position(){
 		var scrollTop = $(window).scrollTop();

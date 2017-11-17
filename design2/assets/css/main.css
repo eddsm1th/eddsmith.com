@@ -17,6 +17,13 @@ p{
 	font-weight: 600;
 }
 
+.shipit{
+	position: fixed;
+	bottom: 100%;
+	right: 20px;
+	transition: 1s all linear;
+}
+
 .btn{
 	position: relative;
 	margin: 0 auto 1rem auto;
@@ -165,7 +172,7 @@ p{
 .slide1 h1{
 	font-size: 160px;
 	margin: 0;
-	position: absolute;
+	position: relative;
 	width: auto;
 	box-sizing: border-box;
 }

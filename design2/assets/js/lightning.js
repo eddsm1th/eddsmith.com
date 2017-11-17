@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+	$('.buzzbuzz').css('margin-top','-' + ( ($('.slide1').height() * 0.4).toString() ) + 'px' );
+
 	var current_segment = 1;
 	var rain_count = 1;
 
@@ -10,18 +13,19 @@ $(document).ready(function(){
 		// var offset_width = event.clientX;
 		var offset_width = Math.floor((Math.random() * $('.slide1').width() - 100 ) + 50);
 		var offset_height = 0;
-		var bolt_length = -50;
+		var bolt_length = 0;
 		var current_direction; 
 		var currentX = offset_width;
-		var max_height = $('.slide1').height();
+		var max_height = Math.floor(Math.random() * $('.slide1').height());
 		var change_course_left = false;
 		var change_course_right = false;
+		var segment_height = 15;
 		
-		bolt2(offset_width, offset_height, bolt_length, current_direction,currentX, max_height, change_course_left, change_course_right);
+		bolt2(offset_width, offset_height, bolt_length, current_direction,currentX, max_height, change_course_left, change_course_right, segment_height);
 	}
 
-	function bolt2(offset_width, offset_height, bolt_length, current_direction,currentX, max_height, change_course_left, change_course_right){
-		var segment_height = Math.floor((Math.random() * 10) + 10);
+	function bolt2(offset_width, offset_height, bolt_length, current_direction,currentX, max_height, change_course_left, change_course_right, segment_height){
+		
 		var segment_rotation = get_rotation();
 		var change_course_threshhold = (max_height - bolt_length) / 11;
 
@@ -89,14 +93,14 @@ $(document).ready(function(){
 
 		current_segment ++;
 
-		if ( bolt_length < (max_height - 12) ) {
+		if ( bolt_length < (max_height) ) {
 			$('.lightning').delay(1000).queue(function(){
 				$(this).addClass('animation-fin').dequeue();
 			});
 
 			$('.animation-fin').remove();
 
-			bolt2(offset_width, offset_height, bolt_length, current_direction,currentX, max_height, change_course_left, change_course_right);
+			bolt2(offset_width, offset_height, bolt_length, current_direction,currentX, max_height, change_course_left, change_course_right, segment_height);
 		}
 	}
 
