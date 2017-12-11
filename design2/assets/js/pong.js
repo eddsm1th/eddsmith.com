@@ -44,6 +44,7 @@ $(document).ready(function(){
 
 				current_ballX = page_width/2;
 				current_ballY = page_height/2;
+				directionY = 0;
 			}
 			else if ( current_ballX < 11 ) {
 				directionX = 1;
@@ -52,6 +53,7 @@ $(document).ready(function(){
 
 				current_ballX = page_width/2;
 				current_ballY = page_height/2;
+				directionY = 0;
 			}
 
 			if ( current_ballY > ( page_height - 11 ) ) {
@@ -117,7 +119,7 @@ $(document).ready(function(){
 			opponent.css('top','' + current_opponentY + 'px');
 		}
 
-		if ( ($('.slide3').offset().top - $(window).scrollTop()) == 0 ) {
+		if ( ($('.pong-wrap').parent().offset().top - $(window).scrollTop()) == 0 ) {
 			in_view = true;
 		}else{
 			in_view = false;
