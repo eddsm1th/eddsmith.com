@@ -12,39 +12,7 @@ header{
 		color: white;
 		font-weight: 900;
 		line-height: 0.8;
-	}
-
-	nav{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		display: flex;
-		color: blue;
-		text-transform: uppercase;
-		box-sizing: border-box;
-		padding: 1rem;
-
-		h2{
-			flex: 1;
-			text-align: left;
-			margin: 0;
-			font-size: 18px;
-			font-weight: 200;
-		}
-
-		div{
-			flex: 2;
-			display: flex;
-			justify-content: flex-end;
-
-			p{
-				margin: 0;
-				font-size: 18px;
-				margin: 0 0 0 1rem;
-				font-weight: 200;
-			}
-		}
+		margin: 0;
 	}
 
 	.main-layer{
@@ -57,24 +25,35 @@ header{
 	}
 
 	.main-layer-overlay{
-		position: absolute;
+		position: relative;
 		width: 100%;
-		height: 58%;
+		height: 50%;
 		background: white;
-		transform: skewY(4deg) translateY(-13%);
+		overflow: hidden;
 		display: flex;
 		justify-content: center;
-		overflow: hidden;
 
-		div{
+		> div{
 			position: absolute;
-			display: block;
-			top: 66%;
-
-			h1{
-				color: blue;
-				transform: skewY(-4deg);
-			}
+			top: 100%;
 		}
 	}	
+
+	.white-filler{
+		position: absolute;
+		width: 100%;
+		height: 20%;
+		background: white;
+		top: 0;
+	}
+
+	.banner-cta{
+		position: absolute;
+		bottom: 40px;
+	}
+}
+
+.content-one{
+	width: 100%;
+	height: 100%;
 }

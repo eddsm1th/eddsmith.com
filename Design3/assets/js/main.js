@@ -1,14 +1,16 @@
 $(document).ready(function(){
 
+	$('.js-overlay-title').css('transform','translateY(-' + $('.js-overlay-title').height()/2 + 'px)')
+
 	$(window).mousemove(function(){
 	    var Xoffset = get_offset(event.clientX, $( window ).width())
 	    var Yoffset = get_offset(event.clientY, $( window ).height())
 
 
 	  	// X and Y movement
-	    $('.paralax-js').css('transform','translate(' + Xoffset*-2 + 'px, ' + Yoffset*-2 + 'px) rotateX(' + Yoffset*2 + 'deg) rotateY(' + Xoffset*-2 + 'deg)');
+	    $('.paralax-js').css('transform','translate(' + Xoffset*-4 + 'px, ' + Yoffset*-4 + 'px) rotateX(' + Yoffset*2 + 'deg) rotateY(' + Xoffset*-2 + 'deg)');
 
-	     $('.skew-js').css('transform','skewY(' + Xoffset*0.2 + 'deg) translateY(-13%)');
+	     $('.skew-js').css('transform','skewY(' + Xoffset*0.2 + 'deg)');
 	     $('.skew-reverse-js').css('transform','skewY(' + Xoffset*-0.2 + 'deg)');
 	})
 
