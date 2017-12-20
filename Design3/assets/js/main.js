@@ -17,9 +17,4 @@ $(document).ready(function(){
 		return (((mouse - (browser / 2))/(browser / 2))*10) * -1;
 	}
 
-	$(window).scroll(function(){
-		$('.main-layer-overlay').css('height','calc(50% - ' + ($(document).scrollTop() / 4) + 'px)');
-		$('.js-overlay-title').css('transform','translateY(-' + ( ( $('.js-overlay-title').height()/2 ) - ( $(document).scrollTop() / 4 ) ) + 'px)');
-	})
-
 })
