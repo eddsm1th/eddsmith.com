@@ -27,7 +27,7 @@ header {
     overflow: hidden;
     display: flex;
     justify-content: center; }
-    header .main-layer-overlay > div {
+    header .main-layer-overlay > .inner-wrap {
       position: absolute;
       top: 100%; }
   header .white-filler {
@@ -36,9 +36,6 @@ header {
     height: 20%;
     background: white;
     top: 0; }
-  header .banner-cta {
-    position: absolute;
-    bottom: 40px; }
 
 .content-one {
   width: 100%;

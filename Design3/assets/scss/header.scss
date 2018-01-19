@@ -33,7 +33,7 @@ header{
 		display: flex;
 		justify-content: center;
 
-		> div{
+		> .inner-wrap{
 			position: absolute;
 			top: 100%;
 		}
@@ -45,11 +45,6 @@ header{
 		height: 20%;
 		background: white;
 		top: 0;
-	}
-
-	.banner-cta{
-		position: absolute;
-		bottom: 40px;
 	}
 }
 
