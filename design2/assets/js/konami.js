@@ -13,6 +13,9 @@ $(document).ready(function(){
 	function reset_timer(input_code_length){
 		if ( input_code.length == code.length && check_success() == true ) {
 			kermit_rain();
+			setTimeout(function(){
+				$('.fin').remove();
+			}, 5000)
 		}
 
 		setTimeout(function() { if ( input_code.length == input_code_length ) { input_code = []; } }, 400);
@@ -33,6 +36,7 @@ $(document).ready(function(){
 	function kermit_rain(){
 		var left = Math.floor(Math.random() * 100);
 		$('body').append('<img src="assets/images/Kermit.png" class="kermit-rain" style="left: ' + left.toString() + '%">');
+		$('.shipit').css('bottom','0%');
 
 		setTimeout( function(){ $('.kermit-rain').addClass('fin') }, 2000 );
 
