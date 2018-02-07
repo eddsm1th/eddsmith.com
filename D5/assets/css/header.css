@@ -1,0 +1,45 @@
+.header-wrap {
+  position: fixed;
+  top: 2rem;
+  width: 100%; }
+  .header-wrap .section-wrap {
+    box-sizing: border-box;
+    width: 1080px;
+    margin: 0 auto; }
+    .header-wrap .section-wrap .nav-box {
+      height: 80px;
+      width: 80px;
+      background: #00c8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer; }
+      .header-wrap .section-wrap .nav-box span {
+        color: #ffffff;
+        font-size: 18px;
+        text-align: center;
+        position: relative;
+        transform: translateX(-3px);
+        width: 20px;
+        height: 2px;
+        background: #ffffff;
+        transition: 0.2s all ease; }
+        .header-wrap .section-wrap .nav-box span:after, .header-wrap .section-wrap .nav-box span:before {
+          width: 20px;
+          height: 2px;
+          background: #ffffff;
+          content: '';
+          position: absolute;
+          left: 0;
+          transform: translateX(6px);
+          transition: 0.2s all ease; }
+        .header-wrap .section-wrap .nav-box span:after {
+          bottom: 10px; }
+        .header-wrap .section-wrap .nav-box span:before {
+          top: 10px; }
+      .header-wrap .section-wrap .nav-box:hover span {
+        transform: translateX(0px); }
+        .header-wrap .section-wrap .nav-box:hover span:before, .header-wrap .section-wrap .nav-box:hover span:after {
+          transform: translateX(0px); }
+
+/*# sourceMappingURL=header.css.map */

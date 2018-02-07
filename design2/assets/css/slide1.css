@@ -1,0 +1,61 @@
+.slide-1-wrap {
+  width: 95%; }
+  .slide-1-wrap > div {
+    display: flex;
+    justify-content: center; }
+  .slide-1-wrap h1 {
+    font-size: 160px;
+    margin: 0;
+    position: relative;
+    width: auto;
+    box-sizing: border-box; }
+    @media (max-width: 1024px) {
+      .slide-1-wrap h1 {
+        font-size: 120px; } }
+    @media (max-width: 768px) {
+      .slide-1-wrap h1 {
+        font-size: 90px;
+        width: 80%; } }
+    .slide-1-wrap h1:before {
+      content: "www.";
+      position: absolute;
+      left: 12px;
+      top: 4px;
+      font-size: 24px; }
+      @media (max-width: 1024px) {
+        .slide-1-wrap h1:before {
+          left: 10px;
+          top: -4px; } }
+      @media (max-width: 768px) {
+        .slide-1-wrap h1:before {
+          left: 8px;
+          top: -11px; } }
+    .slide-1-wrap h1:after {
+      content: ".com";
+      position: absolute;
+      right: 10px;
+      bottom: 12px;
+      font-size: 24px; }
+      @media (max-width: 1024px) {
+        .slide-1-wrap h1:after {
+          right: 6px;
+          bottom: 3px; } }
+      @media (max-width: 768px) {
+        .slide-1-wrap h1:after {
+          right: 4px;
+          bottom: 26px; } }
+  .slide-1-wrap span {
+    width: auto;
+    position: relative;
+    z-index: 99; }
+    @media (max-width: 768px) {
+      .slide-1-wrap span {
+        display: block;
+        width: 100%;
+        text-align: left; } }
+    @media (max-width: 768px) {
+      .slide-1-wrap span:nth-child(2) {
+        text-align: right;
+        transform: translateY(-30px); } }
+
+/*# sourceMappingURL=slide1.css.map */
