@@ -78,5 +78,8 @@ body {
   padding: 0 2rem;
   margin: 0 auto;
   display: flex; }
+  @media (max-width: 768px) {
+    .section-wrap {
+      padding: 0; } }
 
 /*# sourceMappingURL=boop.css.map */

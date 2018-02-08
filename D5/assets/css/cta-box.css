@@ -21,7 +21,7 @@
     color: white;
     text-align: center;
     font-size: 28px; }
-.cta-box.in-view .cta {
-  clip-path: inset(0 -1px 0 0); }
+  .cta-box .section-wrap .cta.in-view {
+    clip-path: inset(0 -1px 0 0); }
 
 /*# sourceMappingURL=cta-box.css.map */
