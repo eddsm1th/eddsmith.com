@@ -1,0 +1,27 @@
+@media (max-width: 768px) {
+  .cta-box .section-wrap {
+    display: block; } }
+.cta-box .section-wrap .cta {
+  flex: 1;
+  padding: 3rem 5rem;
+  background: #00c8ff;
+  clip-path: inset(0 100% 0 0);
+  transition: 1.4s all ease;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media (max-width: 1024px) {
+    .cta-box .section-wrap .cta {
+      padding: 2rem 3rem; } }
+  .cta-box .section-wrap .cta:nth-child(1) {
+    background: #00b1e2; }
+  .cta-box .section-wrap .cta:nth-child(3) {
+    background: #42d6ff; }
+  .cta-box .section-wrap .cta p {
+    color: white;
+    text-align: center;
+    font-size: 28px; }
+.cta-box.in-view .cta {
+  clip-path: inset(0 -1px 0 0); }
+
+/*# sourceMappingURL=cta-box.css.map */

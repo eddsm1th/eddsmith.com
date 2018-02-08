@@ -1,0 +1,43 @@
+.cta-box{
+	.section-wrap{
+
+		@media(max-width: 768px){
+			display: block;
+		}
+
+		.cta{
+			flex: 1;
+			padding: 3rem 5rem;
+			background: #00c8ff;
+			clip-path: inset(0 100% 0 0);
+			transition: 1.4s all ease;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			@media(max-width: 1024px){
+				padding: 2rem 3rem;
+			}
+
+		 	&:nth-child(1){
+		 		background: #00b1e2;
+		 	}
+
+		 	&:nth-child(3){
+		 		background: #42d6ff;
+		 	}
+
+			p{
+				color: white;
+				text-align: center;
+				font-size: 28px;
+			}
+		}	
+	}
+
+	&.in-view{
+		.cta{
+			clip-path: inset(0 -1px 0 0);
+		}
+	}
+}

@@ -3,12 +3,22 @@
 	width: 100%;
 	z-index: 99999999;
 
+	@media(max-width: 768px){
+		height: 100%;
+		margin: 0;
+	}
+
 	.section-wrap{
 		position: relative;
 		transform: translateX(-80px);
 
 		@media(max-width: 1440px){
 			transform: translateX(0px);
+		}
+
+		@media(max-width: 768px){
+			height: 100%;
+			padding: 0;
 		}
 
 		.nav-left{
@@ -106,6 +116,14 @@
 						font-weight: 500;
 						cursor: pointer;
 						position: relative;
+						opacity: 0;
+						transition: 0.3s all ease;
+						transform: translateX(-12px);
+
+						&.open{
+							opacity: 1;
+							transform: translateX(0px);
+						}
 
 						@media(min-width: 769px){
 							&:not(:last-child){
@@ -153,8 +171,8 @@
 
 			@media(max-width: 768px){
 				position: absolute;
-				width: calc(100% - 4rem);
-				height: 500px;
+				width: 100%;
+				height: 100%
 			}
 
 			&.active{
