@@ -7,6 +7,12 @@
 body {
   background: #181818; }
 
+p + p {
+  margin-top: 1.5rem; }
+
+p + h3 {
+  margin-top: 3rem; }
+
 .pt-s {
   padding-top: 0.5rem; }
 .pt-m {
@@ -74,12 +80,12 @@ body {
   margin-right: 4rem; }
 
 .section-wrap {
-  max-width: 1300px;
-  padding: 0 2rem;
+  max-width: 2200px;
+  padding: 0 7rem;
   margin: 0 auto;
   display: flex; }
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .section-wrap {
-      padding: 0; } }
+      padding: 0 0rem; } }
 
 /*# sourceMappingURL=boop.css.map */

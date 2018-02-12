@@ -9,6 +9,14 @@ body{
 	background: #181818;
 }
 
+p + p{
+	margin-top: 1.5rem;
+}
+
+p + h3{
+	margin-top: 3rem;
+}
+
 .p{
 	&t{
 		&-s{
@@ -128,12 +136,12 @@ body{
 }
 
 .section-wrap{
-	max-width: 1300px;
-	padding: 0 2rem;
+	max-width: 2200px;
+	padding: 0 7rem;
 	margin: 0 auto;
 	display: flex;
 
-	@media(max-width: 768px){
-		padding: 0;
+	@media(max-width: 1024px){
+		padding: 0 0rem;
 	}
 }

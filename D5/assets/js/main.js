@@ -26,9 +26,9 @@ $(document).ready(function(){
 	})
 
 	function nav_transition(index){
-		$('li:nth-child(' + index + ')').addClass('open')
+		$('.nav-item:nth-child(' + index + ')').addClass('open')
 
-		if ( index <= 4 ) {
+		if ( index <= $('.nav-item').length ) {
 			setTimeout(function(){
 				nav_transition(index + 1);
 			}, 80)
