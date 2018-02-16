@@ -11,7 +11,7 @@
     left: 7rem;
     background: #00c8ff;
     clip-path: inset(0 0 0 100%);
-    transition: 0.4s all ease; }
+    transition: 0.6s all ease; }
     @media (max-width: 768px) {
       .intro .section-wrap .transition-effect {
         width: 100%;
@@ -53,7 +53,8 @@
           padding-left: 2rem; } }
     .intro .section-wrap .inner-wrap.in-view {
       clip-path: inset(0 0 0 -1px);
-      transition: 1s all ease; }
+      transition: 1s all ease;
+      transition-delay: 0.2s; }
       .intro .section-wrap .inner-wrap.in-view h3 {
         animation-name: intro-title-fade-in;
         animation-duration: 0.4s;

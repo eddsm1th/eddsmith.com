@@ -101,11 +101,14 @@
 }
 
 @keyframes hero-image-in{
-	from{
+	1%{
 		clip-path: inset(0 0 100% 0);
 	}
-	to{
+	99%{
 		clip-path: inset(0 0 -1px 0);
+	}
+	100%{
+		clip-path: none;
 	}
 }
 
