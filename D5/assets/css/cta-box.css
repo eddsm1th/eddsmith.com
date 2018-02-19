@@ -33,11 +33,17 @@
   .cta-box .section-wrap .cta.in-view {
     transition: 1s all ease;
     clip-path: inset(0 -1px 0 0); }
+    .cta-box .section-wrap .cta.in-view h3 {
+      transform: translateX(0px);
+      opacity: 1;
+      transition: 0.3s all ease;
+      transition-delay: 0.7s; }
+    .cta-box .section-wrap .cta.in-view p {
+      transform: translateX(0px);
+      opacity: 1;
+      transition: 0.3s all ease;
+      transition-delay: 0.9s; }
     @media (min-width: 769px) {
-      .cta-box .section-wrap .cta.in-view:nth-child(1) h3 {
-        transition-delay: 0.7s; }
-      .cta-box .section-wrap .cta.in-view:nth-child(1) p {
-        transition-delay: 0.9s; }
       .cta-box .section-wrap .cta.in-view:nth-child(2) {
         transition-delay: 0.2s; }
         .cta-box .section-wrap .cta.in-view:nth-child(2) h3 {
@@ -50,13 +56,5 @@
           transition-delay: 1.1s; }
         .cta-box .section-wrap .cta.in-view:nth-child(3) p {
           transition-delay: 1.3s; } }
-    .cta-box .section-wrap .cta.in-view h3 {
-      transform: translateX(0px);
-      opacity: 1;
-      transition: 0.3s all ease; }
-    .cta-box .section-wrap .cta.in-view p {
-      transform: translateX(0px);
-      opacity: 1;
-      transition: 0.3s all ease; }
 
 /*# sourceMappingURL=cta-box.css.map */
