@@ -9,10 +9,10 @@
 	}
 
 	.section-wrap{
+		height: 100%;
 
 		@media(max-width: 768px){
 			flex-direction: column;
-			height: 100%;
 			margin-bottom: 2rem;
 			padding: 0;
 		}
@@ -67,8 +67,9 @@
 				line-height: 1.4;
 				font-size: 48px;
 				position: relative;
-				clip-path: inset(100% 0 0 0);
 				overflow: visible;
+				opacity: 0;
+				transform: translateY(40px);
 
 				animation-name: hero-text-in;
 				animation-duration: 0.8s;
@@ -93,7 +94,7 @@
 					animation-duration: 0.3s;
 					animation-timing-function: ease;
 					animation-fill-mode: forwards;
-					animation-delay: 1.4s;
+					animation-delay: 1.2s;
 				}
 			}
 		}
@@ -113,14 +114,13 @@
 }
 
 @keyframes hero-text-in{
-	1%{
-		clip-path: inset(100% 0 0 0);
+	from{
+		opacity: 0;
+		transform: translateY(40px);
 	}
-	99%{
-		clip-path: inset(0 0 0 0);
-	}
-	100%{
-		clip-path: none;
+	to{
+		opacity: 1;
+		transform: translateY(0px);
 	}
 }
 
