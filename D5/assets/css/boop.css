@@ -7,11 +7,16 @@
 body {
   background: #181818; }
 
+a {
+  color: #00c8ff; }
+  a:hover {
+    text-decoration: underline; }
+
 p + p {
   margin-top: 1.5rem; }
 
 p + h3 {
-  margin-top: 3rem; }
+  margin-top: 2.5rem; }
 
 .pt-s {
   padding-top: 0.5rem; }
@@ -86,6 +91,6 @@ p + h3 {
   display: flex; }
   @media (max-width: 1024px) {
     .section-wrap {
-      padding: 0 0rem; } }
+      padding: 0 0; } }
 
 /*# sourceMappingURL=boop.css.map */

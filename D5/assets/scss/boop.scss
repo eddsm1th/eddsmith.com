@@ -9,13 +9,22 @@ body{
 	background: #181818;
 }
 
+a{
+	color: #00c8ff;
+
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
 p + p{
 	margin-top: 1.5rem;
 }
 
 p + h3{
-	margin-top: 3rem;
+	margin-top: 2.5rem;
 }
+
 
 .p{
 	&t{
@@ -142,6 +151,6 @@ p + h3{
 	display: flex;
 
 	@media(max-width: 1024px){
-		padding: 0 0rem;
+		padding: 0 0;
 	}
 }

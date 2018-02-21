@@ -47,9 +47,14 @@ $(document).ready(function(){
 		})
 	}
 
+	function has_scroll_offset(e){
+		console.log(e);
+		return i = e == 0 ? 0 : -144;
+	}
+
 	$('.nav-item').click(function(){
 		$('html, body').delay(1000).animate({
-	        scrollTop: $('.' + $(this).attr('data-target')).offset().top
+	        scrollTop: ($('.' + $(this).attr('data-target')).offset().top) + has_scroll_offset($(this).index())
 	    }, 1200);
 
 		$('.nav-left').toggleClass('active');

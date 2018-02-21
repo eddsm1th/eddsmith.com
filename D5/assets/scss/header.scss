@@ -141,6 +141,7 @@
 						opacity: 0;
 						transition: 0.3s all ease;
 						transform: translateX(-12px);
+						z-index: 1;
 
 						&.open{
 							opacity: 1;
@@ -148,6 +149,33 @@
 						}
 
 						@media(min-width: 769px){
+							&:before{
+								content: "";
+								position: absolute;
+								top: 50%;
+								left: 0;
+								transform: translateY(-2px);
+								height: 2px;
+								width: 0px;
+								background: #00c8ff;
+								transition: 0.3s all ease;
+								z-index: -1;
+							}
+
+							&:hover{
+								&:before{
+									width: calc(100% - 32px);
+								}
+							}
+
+							&:last-child{
+								&:hover{
+									&:before{
+										width: 100%;
+									}
+								}
+							}
+
 							&:not(:last-child){
 								margin-right: 1.5rem;
 								
