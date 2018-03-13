@@ -48,7 +48,6 @@ $(document).ready(function(){
 	}
 
 	function has_scroll_offset(e){
-		console.log(e);
 		return i = e == 0 ? 0 : -144;
 	}
 

@@ -3,21 +3,35 @@
 		width: 100%;
 		display: flex;
 
+		&:hover {
+			.work-wrap__item {
+				flex: 1 !important;
+
+				&:hover {
+					flex: 3 !important;
+				}
+			}
+		}
+
 		&__item{
+			cursor: pointer;
+			clip-path: inset(0 0 0 100%);
 			flex: 1;
 			height: 400px;
 			background: blue;
-			transition: 0.4s all ease;
 			position: relative;
+			background-image: url('http://www.aaaa.org/wp-content/uploads/2016/06/B-W_Career-Mountains-800x800.png');
 
-
-			&:nth-child(even){
-				background: lime;
-			}
-
-			&:hover{
+			&.active { 
 				flex: 3;
 			}
+		}
+
+		&__content-wrap {
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transform: translateX(40px);
 
 			h3{
 				width: 100%;
@@ -28,8 +42,22 @@
 				transform: rotate(-90deg) translateY(100%);
     			transform-origin: bottom left;
     			padding: 1rem;
-    			white-space: no-wrap;
+    			white-space: nowrap;
     			font-size: 24px;
+			}	
+		}
+
+		&.in-view {
+			.work-wrap__item {
+				transition: 1.2s all ease;
+				clip-path: inset(0 0 0 0);
+
+				.work-wrap__content-wrap {
+					transition: 0.6s all ease;
+					transition-delay: 1s;
+					opacity: 1;
+					transform: translateX(0);
+				}
 			}
 		}
 	}
